@@ -437,7 +437,7 @@ struct Value *handle_python_load_command( String *args, int offset )
 		"from importlib import reload\n"
 		"try:\n"
 		"  reload( %s )\n"
-		"except ( NameError, TypeError ):\n"
+		"except ( NameError, TypeError, AttributeError ):\n"
 		"  import %s\n",
 		name, name );
 
